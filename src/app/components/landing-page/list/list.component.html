@@ -1,0 +1,33 @@
+<div #container class="container">
+  <div class="header">
+    <h1>List of interns</h1>
+  </div>
+  <div #loader class="loader"></div>
+  <div #internList class="interns" id="interns">
+    <div class="intern" *ngFor="let intern of interns; let i = index" (click)="expand(i)">
+      <div class="collapsed" id="collapsed-{{i}}">
+        {{intern.name}}
+      </div>
+      <div class="details" [attr.id]="'details-'+i" style="display:none">
+        Intern ID: {{intern._id}}<br><br>
+        Initials: <input #initials value="{{intern.initials}}">
+        Name: <input #name id="name-{{i}}" value="{{intern.name}}">
+        Visit Date: <input #visitDate id="visitDate-{{i}}" value="{{intern.visitDate}}">
+        Cooperation: <input #cooperation id="cooperation-{{i}}" value="{{intern.cooperation}}">
+        Company Name: <input #companyName id="companyName-{{i}}" value="{{intern.companyName}}">
+        Company person:  <input #companyPerson id="companyPerson-{{i}}" value="{{intern.companyPerson}}">
+        Company qualifications: <input #qualifications id="qualifications-{{i}}" value="{{intern.companyQualification}}">
+        Company trends: <input #companyTrends id="companyTrends-{{i}}" value="{{intern.companyTrends}}">
+        Internship ID: <input #internshipID id="internshipID-{{i}}" value="{{intern.IDOfInternship}}">
+        Misc: <input #misc id="misc-{{i}}" value="{{intern.miscellaneous}}">
+      </div>
+      <div class="buttons" id="buttons-{{i}}" style="display: none">
+        <button class="updateButton" (click)="updateIntern(intern, i)">Update</button>
+        <button class="deleteButton" (click)="deleteIntern(intern)">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div #message class="message">
+
+  </div>
+</div>

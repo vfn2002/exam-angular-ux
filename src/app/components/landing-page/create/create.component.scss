@@ -1,0 +1,54 @@
+$red: #EF9A9A;
+$green: #A5D6A7;
+$grey: #f7f7f7;
+$yellow: #FFF59D;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  label {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+}
+.addButton{
+  width: 200px;
+  background: $green;
+  border: none;
+  color: white;
+  padding: 15px;
+  margin: 5px;
+  transition: 0.2s;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.addButton:hover {
+  transform: translateY(-10%);
+  background-color: $green;
+}
+
+@keyframes fade-in-out {
+  0% {opcacity: 0}
+  15% {opacity: 1}
+  85% {opacity: 1}
+  100% {opacity: 0}
+}
+@media screen and (max-width: 500px) {
+  body {
+    background-color: red;
+  }
+}

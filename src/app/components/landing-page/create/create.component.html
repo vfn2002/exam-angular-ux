@@ -1,0 +1,32 @@
+<div #container class="container">
+  <div class="header">
+    <h1>Add intern</h1>
+  </div>
+  <div class="form">
+    <label for="initials">Initials</label>
+    <input #initials id="initials" type="text" class="name">
+    <label for="name">Name</label>
+    <input #name id="name" type="text">
+    <label for="cooperation">Cooperation</label>
+    <input #cooperation id="cooperation" type="text">
+    <label for="qualifications">Company Qualifications</label>
+    <input #qualifications id="qualifications" type="text">
+    <label for="companyPerson">Company Person</label>
+    <input #companyPerson id="companyPerson" type="text">
+    <label for="companyName">Company Name</label>
+    <input #companyName id="companyName" type="text">
+    <label for="companyTrends">Company trends</label>
+    <input #companyTrends id="companyTrends" type="text">
+    <label for="internshipID">Internship ID</label>
+    <input #internshipID id="internshipID" type="text">
+    <label for="visitDate">Visit Date</label>
+    <input #visitDate id="visitDate" type="date">
+    <label for="misc">Misc</label>
+    <input #misc id="misc">
+  </div>
+  <div class="buttons">
+    <button class="addButton" (click)="onAddIntern()">Add</button>
+  </div>
+  <div #message class="message">
+  </div>
+</div>
